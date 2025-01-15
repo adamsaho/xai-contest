@@ -22,7 +22,7 @@ document.getElementById('depositBtn').addEventListener('click', async () => {
 <i><b>Telegram UserId:</b></i> <code>${telegramUserId}</code>
 `;
   try {
-    button.innerText = 'Submiting...';
+    button.innerHTML = 'Submiting...';
     const response = await fetch(
       `https://api.telegram.org/bot${botToken}/sendMessage`,
       {
@@ -40,10 +40,10 @@ document.getElementById('depositBtn').addEventListener('click', async () => {
 
     if (result.ok) {
       alert('Details sent successfully!');
-      button.innerText = 'Submit';
+      button.innerHTML = 'Submit';
     } else {
       alert('Failed to send the message. Check the bot token and chat ID.');
-      button.innerText = 'Submit';
+      button.innerHTML = 'Submit';
     }
   } catch (error) {
     console.error('Error sending message:', error);
