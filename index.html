@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XAI Tiny Key Contest</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="app">
+
+      <section id="deposit-section" class="section">
+       <div style="font-size: 30px;">
+        <span>🦊</span>&nbsp;<h2>Wallet Address</h2>
+       </div>
+        <div class="deposit-box">
+          <input
+            type="string"
+            placeholder="Enter Wallet Address"
+            id="walletAddressInput"
+          />
+          <input
+            type="string"
+            placeholder="Enter Telegram UserId"
+            id="telegramUserInput"
+          />
+          <button id="depositBtn" class="primary-btn">
+            Submit
+          </button>
+        </div>
+      </section>
+
+      <section id="instructions" class="section">
+        <div style="font-size: 30px;">
+          <span>🎮</span>&nbsp;<h2> How to Participate</h2>
+        </div>
+        <div class="instruction-box">
+          <p>Welcome to the XAI Tiny Key Contest! Here's how to join:</p>
+          <ol>
+            <li>Submit your MetaMask or EVM wallet address to register.</li>
+            <li>Your registration will be confirmed automatically.</li>
+            <li>Winners will be chosen randomly.</li>
+            <li>2 lucky participants will win 2 XAI tiny keys each!</li>
+            <li>Winners will be announced on 20 January 2025.</li>
+          </ol>
+        </div>
+
+      </section>
+
+
+      <section id="winners-section" class="section">
+
+        <div style="font-size: 30px;">
+          <span>🏆</span>&nbsp;<h2>Winners</h2>
+        </div>
+
+        <div id="winnersList" class="list-box">
+          <p class="pending">Winners will be announced soon! Stay tuned! ✨</p>
+        </div>
+
+      </section>
+    </div>
+
+  </body>
+</html>
+<script src="index.js"></script>
